@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Question 💌</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+            background: linear-gradient(to right, #ff758c, #ff7eb3);
+            color: white;
+            overflow: hidden;
+        }
+
+        h1 {
+            margin-top: 40px;
+        }
+
+        .letter {
+            width: 60%;
+            margin: auto;
+            background: rgba(255,255,255,0.2);
+            padding: 20px;
+            border-radius: 20px;
+            margin-top: 20px;
+        }
+
+        .buttons {
+            margin-top: 30px;
+            position: relative;
+            height: 150px;
+        }
+
+        button {
+            padding: 15px 25px;
+            font-size: 18px;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+        }
+
+        #yesBtn {
+            background-color: white;
+            color: #ff4b5c;
+            margin-right: 20px;
+        }
+
+        #noBtn {
+            background-color: black;
+            color: white;
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Will You Be My Valentine? 💖</h1>
+
+    <div class="letter">
+        <p>
+            My love,<br><br>
+            I feel like we are standing at the start of something new.
+            Not because our love is new but because everyday with you feels
+            like another chance to choose each other again. A fresh page. A deeper understanding.
+            and A stronger bond. I want you to know I am stepping into this new beginning
+            with my whole heart. Whatever we've faced, whatever we will face, I see it as part of building something
+            lasting and something real. loving you isn't just about the easy moments or the laughter
+            it's also about the promise I make to you, to stay, to grow and to be there for you no matter what.
+            I want to be your safe place. the person you can lean on when you're tired and the one who reminds you of your 
+            strength when you forget it. This new beginning isn't about starting over it is about starting stronger and more intentional.
+            <br><br>
+            I love you and I am here for you.
+        </p>
+    </div>
+
+    <div class="buttons">
+        <button id="yesBtn" onclick="yesClicked()">Yes 💕</button>
+        <button id="noBtn" onmouseover="moveButton()">No 😅</button>
+    </div>
+
+    <script>
+        const noBtn = document.getElementById("noBtn")
+
+        function yesClicked() {
+            alert("YAYYY 😍 I love you so much!!! ❤️")
+        }
+
+        function moveButton() {
+            const maxX = window.innerWidth - noBtn.offsetwidth;
+            const maxY = window.innerHeight - noBtn.offsetHeight;
+
+            const randomX = Math.floor(Math.random() * maxX);
+            const randomY = Math.floor(Math.random() * maxY);
+
+            noBtn.style.left = randomX + "px";
+            noBtn.style.top = randomY + "px";
+        }
+    </script>
+
+</body>
+</html>
